@@ -1,0 +1,221 @@
+:root {
+--main-bg-color:#f5f5f5;
+--secondary-color:#0078ff;
+}
+/* ------------------header-style------------------ */
+header {
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)) ,url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+header p::after {
+    content: "";
+    animation-name: animated-text;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+@keyframes animated-text {
+    0% {content: "D";}
+    5% {content: "D|";}
+    7% {content: "De|";}
+    9% {content: "Dev|";}
+    11% {content: "Deve|";}
+    13% {content: "Devel|";}
+    16% {content: "Develo|";}
+    19% {content: "Develop|";}
+    21% {content: "Develope|";}
+    24% {content: "Developer|";}
+    27% {content: "Develope|";}
+    30% {content: "Develop|";}
+    33% {content: "Develo|";}
+    36% {content: "Devel|";}
+    36% {content: "Deve|";}
+    39% {content: "Dev|";}
+    42% {content: "De|";}
+    45% {content: "D|";}
+    48% {content: "|";}
+    52% {content: "F";}
+    55% {content: "F|";}
+    58% {content: "Fr|";}
+    62% {content: "Fre|";}
+    65% {content: "Free|";}
+    68% {content: "Freel|";}
+    72% {content: "Freela|";}
+    75% {content: "Freelan|";}
+    78% {content: "Freelanc|";}
+    81% {content: "Freelance|";}
+    84% {content: "Freelancer|";}
+    87% {content: "Freelance|";}
+    89% {content: "Freelanc|";}
+    90% {content: "Freelan|";}
+    92% {content: "Freela|";}
+    94% {content: "Freel|";}
+    95% {content: "Free|";}
+    96% {content: "Fre|";}
+    97% {content: "Fr|";}
+    99% {content: "F|";}
+    100% {content: "|";}
+}
+.dropdown-menu2 {
+    transform: translateX(0%);
+    display: none;
+}
+.dropdown2-toggle:hover +ul{
+    transform: translateX(100%);
+    display: block;
+}
+nav .nav-link ,.nav-link:focus, .nav-link:hover ,.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #fff;
+    font-weight: bold;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0;
+}
+nav ul li a {
+    position: relative;
+}
+.navbar-toggler {
+    color: #fff;
+}
+.home-active::before {
+    content: "";
+    background-color: #fff;
+    width: 90%;
+    height: 3px;
+    bottom: -6px;
+    left: 7px;
+    position: absolute;
+}
+nav ul li a::before {
+    content: "";
+    background-color: #fff;
+    width: 0;
+    height: 3px;
+    bottom: -6px;
+    left: 7px;
+    position: absolute;
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out 0.3s;
+}
+nav ul li a:hover::before {
+    width: 90%;
+}
+.navbar-toggler-icon {
+    background-image: url(../images/bars-solid.svg);
+    width: 25px;
+}
+/* -------------------sections-style--------------------- */
+section {
+    background-color: var(--main-bg-color);
+}
+.about .row .col-md-6 h2::before, .contact .row h2::before{
+    content: "";
+    background-color: var(--secondary-color);
+    width: 15%;
+    height: 3px;
+    bottom: -8px;
+    left: 0;
+    position: absolute;
+}
+.section-heading p::before {
+    content: "";
+    background-color: var(--secondary-color);
+    width: 4%;
+    height: 4px;
+    bottom: -15px;
+    left: 48%;
+    position: absolute;
+}
+.services .icon .border {
+    border-color: var(--secondary-color) !important;
+    border-width: 9px !important;
+    transition: all 0.5s;
+}
+.features .icon .border {
+    border-color: #cee1f8 !important;
+    border-width: 9px !important;
+    transition: all 0.5s;
+}
+.services .icon:hover .border {
+    border-color: #53daf553 !important;
+    background-color: var(--secondary-color);
+}
+.features {
+    background-image: linear-gradient(#397dddbd,#397dddbd), url(../images/counters-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.portfolio .card-img,.blogs .card-img {
+    overflow: hidden;
+}
+.card-img, .card-img-top,.card {
+    border:none;
+    transition: transform 0.5s;
+}
+.card img:hover {
+    transform: scale(1.2);
+}
+.card-text span {
+    color: var(--secondary-color);
+}
+.card-body a {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    bottom: 12px;
+    right: 16px;
+}
+.testimonials .carousel-item {
+    background-image: linear-gradient(#397dddbd,#397dddbd), url(../images/overlay-bg.jpg);
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.contact {
+    background-image: linear-gradient(#397dddbd,#397dddbd), url(../images/overlay-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+} 
+.blogs .card .btn {
+    font-size: 13px !important;
+}
+.list-group-flush img {
+    width: 40px;
+    border-radius: 50%;
+}
+.social li {
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+}
+footer {
+    background-color: #0062d3;
+}
+.back-top {
+    right: 10px;
+    bottom: 10px;
+}
+
+/* ----------------Media Query--------------------- */
+@media screen and (min-width:769px) {
+    header h1 {
+        font-size: 70px;
+    }
+}
+@media screen and (min-width:769px) and (max-width:992px) {
+    .about .row .col-md-6 img {
+        width: 85%;
+    }
+    .email-wrap {
+        word-break: break-all;
+    }
+}
